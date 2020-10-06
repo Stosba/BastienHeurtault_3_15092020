@@ -12,13 +12,13 @@ p
 	line-height: 1.5em;
 }
 
-/*colors*/
-$color-prim: #9356DC
-$color-sec: #FF79DA
-$color-ter: #99E2D0
-
+/*colors
+$color-prim: #9356DC;
+$color-sec: #FF79DA;
+$color-ter: #99E2D0;
+*/
 /*Header*/
-h1
+header h1
 {
 	font-family: 'Shrikhand';
 	text-align: center;
@@ -42,21 +42,27 @@ h2
 	margin-right: 10%;
 	margin-left: 10%;
 	padding-top: 1em;
+	margin-top: -1em;
 }
 h2 + p
 {
 	margin-right: 10%;
 	margin-left: 10%;
 }
-.accueil__explorer--btn a
+.accueil__explorer--btn p
 {
-	background-color:#FF79DA;
+	background: rgb(147,86,220);
+	background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 	border-width: 60%;
 	border-radius: 30px 30px;
 	box-shadow: 10px 10px 20px -7px outset rgba(0,0,0,0.30);
-	box-shadow: -10px -10px 50px -7px inset rgba(0,0,0,0.30);
 	padding: 1em;
-	color: white;
+	width: 11em;
+	margin:auto;
+}
+a
+{
+	text-decoration: none;
 }
 .accueil__explorer--btn
 {
@@ -69,16 +75,12 @@ h2 + p
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	margin: 1em;
+	margin: 3%;
 }
 #fonctionnement h2
 {
 	text-align: left;
 	margin-left: 3px;
-}
-#fonctionnement p
-{
-	text-align: center;
 }
 .choix
 {
@@ -90,8 +92,23 @@ h2 + p
 	border-radius: 20px 20px 20px 20px;
 	box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.20);
 	cursor: pointer;
-	text-transform: #9356DC;
-
+}
+.choix:hover
+{
+	color: #9356DC;
+	background-color: #f5edff;
+}
+.choix p
+{
+	color: black;
+	text-align: left;
+	width: 75%;
+}
+.choix i
+{
+	padding: 4.5%;
+	text-align: right;
+	width: 25%;
 }
 .choix__num p
 {
@@ -102,12 +119,14 @@ h2 + p
 	width: 20px;
 	margin-left: -50%;
 	margin-top: 1.5em;
-	padding: 0.5em;
+	padding: 0.4em;
 }
 .choix__fonct
 {
+	display: flex;
+	flex-direction: row;
 	width: 80%;
-	padding: 1em;
+	padding: 3%;
 }
 
 /*Restaurants*/
@@ -143,7 +162,6 @@ h2 + p
 }
 .nom
 {
-	width: 80%;
 	margin-left: 5%;
 }
 .coeur
@@ -153,8 +171,26 @@ h2 + p
 .fa-heart
 {
 	font-size: 1.5em;
+}
+.coeur .fas
+{
+	color: #9356DC;
+	position: relative;
+	top: 0px; left: -24px;
+	opacity: 0%;
 	cursor: pointer;
-	transform: #9356DC;
+}
+.coeur .fas:hover
+{
+	opacity: 100%;
+}
+.coeur .fas:enabled
+{
+	opacity: 100%;
+}
+.coeur .fas:visited
+{
+	opacity: 100%;
 }
 
 /*Footer*/
@@ -184,18 +220,42 @@ footer i
 #palettedugout
 {
 	background-color: #f6f6f6;
-	border-top-right-radius: 30px;
-	border-top-left-radius: 30px;
+	border-top-right-radius: 40px;
+	border-top-left-radius: 40px;
+	margin-top: -10em;
 }
 #palettedugout section
 {
 	margin-left: 3%;
 	margin-right: 3%;
 }
-header img
+#menus
 {
+	display: flex;
+	flex-direction: row;
+}
+header a
+{
+	font-size: 1.5em;
+	width: 10%;
+	margin-top: 1.3em;
+	margin-left: 3%;
+}
+#menus h1
+{
+	width: 90%;
+	margin-left: -7%;
+}
+aside
+{
+	height: 20em;
 	width: 100%;
-	height: 200px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#palettepic
+{
+	background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 
 /*titre*/
@@ -203,19 +263,20 @@ header img
 {
 	display: flex;
 	flex-direction: row;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
 }
 #titre .coeur
 {
 	margin: auto;
-	font-size: 2em;
+	font-size: 1em;
 }
 h3
 {
 	width: 80%;
 	font-family: 'Shrikhand';
-	font-size: 3em;
+	font-size: 1.5em;
 }
-
 /*Menus*/
 .sst
 {
@@ -233,21 +294,23 @@ article
 }
 .commander p
 {
-	background-color:#FF79DA;
+	background: rgb(147,86,220);
+	background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 	border-width: 60%;
 	border-radius: 30px 30px;
-	box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.30);
+	box-shadow: 10px 10px 20px -7px outset rgba(0,0,0,0.30);
 	padding: 1em;
-	color: white;
+	width: 6em;
+	margin:auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
 	text-align: center;
-	width: 20%;
-	margin: auto;
-	margin-bottom: 3em;
-	margin-top: 3em;
 }
 .commander
 {
 	background-color: #f6f6f6;
+	margin-bottom: -2em;
+	padding-bottom: 2em;
 }
 .plats__choix
 {
