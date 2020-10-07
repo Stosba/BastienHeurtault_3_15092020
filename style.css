@@ -291,6 +291,8 @@ article
 	background-color: white;
 	padding: 0.5em;
 	margin-bottom: 1em;
+	position: relative;
+	top: 100px;
 }
 .commander p
 {
@@ -327,4 +329,115 @@ article
 .plats__prix p
 {
 	margin-top: 2em;
+}
+
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+             opacity: 0%;
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+             opacity: 100%;
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 0%;
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+             opacity: 100%;
+  }
+}
+.art1
+{
+	-webkit-animation: slide-top 0.5s both;
+	        animation: slide-top 0.5s both;
+}
+.art2
+{
+	-webkit-animation: slide-top 0.7s both;
+	        animation: slide-top 0.7s both;
+}
+.art3
+{
+	-webkit-animation: slide-top 1s both;
+	        animation: slide-top 1s both;
+}
+
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+ */
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+.fa-check-circle
+{
+	color: white;
+	background-color: #99E2D0;
+	font-size: 2em;
+	cursor: pointer;
+	padding: 1em;
+	position: relative;
+	top: -60px;
+	left: 150px;
+}
+.fa-check-circle:hover
+{   
+	-webkit-animation: rotate-center 0.6s ease-in-out reverse both;
+	        animation: rotate-center 0.6s ease-in-out reverse both;
+}
+
+.plats__prix:hover
+{
+		-webkit-animation: slide-left 0.5s both;
+	        animation: slide-left 0.5s both;
 }
