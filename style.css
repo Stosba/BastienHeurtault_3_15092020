@@ -75,7 +75,7 @@ a
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	margin: 3%;
+	margin: 10% 3% 10% 3%;
 }
 #fonctionnement h2
 {
@@ -163,10 +163,12 @@ a
 .nom
 {
 	margin-left: 5%;
+	flex-grow: 1;
 }
 .coeur
 {
-	margin: 20px;
+	margin-top: 20px;
+	text-align: right;
 }
 .fa-heart
 {
@@ -332,7 +334,7 @@ article
 }
 
  * ----------------------------------------
- * animation slide-top
+ * animations
  * ----------------------------------------
  */
 @-webkit-keyframes slide-top {
@@ -422,13 +424,13 @@ article
 .fa-check-circle
 {
 	color: white;
-	background-color: #99E2D0;
 	font-size: 2em;
 	cursor: pointer;
-	padding: 1em;
+	background-color: #99E2D0;
+	padding: 0.6em;
 	position: relative;
-	top: -60px;
-	left: 150px;
+	top: -80px;
+	left: 100px;
 }
 .fa-check-circle:hover
 {   
@@ -439,5 +441,5 @@ article
 .plats__prix:hover
 {
 		-webkit-animation: slide-left 0.5s both;
-	        animation: slide-left 0.5s both;
+	        	animation: slide-left 0.5s both;
 }
