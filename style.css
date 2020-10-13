@@ -170,6 +170,10 @@ a
 	border-top-left-radius: 20px;
 	background-size: cover;
 }
+#restaurants p
+{
+	color: black;
+}
 .nom
 {
 	margin-left: 5%;
@@ -298,6 +302,7 @@ article
 	position: relative;
 	top: 100px;
 	overflow: hidden;
+	cursor: pointer;
 }
 .commander p
 {
@@ -312,12 +317,14 @@ article
 	margin-top: 2em;
 	margin-bottom: 2em;
 	text-align: center;
+	cursor: pointer;
 }
 .commander
 {
 	background-color: #f6f6f6;
 	margin-bottom: -2em;
 	padding-bottom: 2em;
+	color: white;
 }
 .plats__choix
 {
@@ -325,7 +332,7 @@ article
 }
 .plats__choix p
 {
-	margin: 0.5em;
+	margin: 1%;
   	white-space: nowrap;
   	overflow: hidden;
   	text-overflow: ellipsis;
@@ -333,11 +340,11 @@ article
 .plats__prix 
 {
 	height: 1em;
+	margin-right: 2em;
 }
 .plats__prix p
 {
 	margin-top: 2em;
-	margin-left: 60%;
 }
 
  * ----------------------------------------
@@ -370,16 +377,22 @@ article
 }
 .art1
 {
+	display: flex;
+	flex-direction: row;
 	-webkit-animation: slide-top 0.5s both;
 	        animation: slide-top 0.5s both;
 }
 .art2
-{
+{	
+	display: flex;
+	flex-direction: row;
 	-webkit-animation: slide-top 0.7s both;
 	        animation: slide-top 0.7s both;
 }
 .art3
 {
+	display: flex;
+	flex-direction: row;
 	-webkit-animation: slide-top 1s both;
 	        animation: slide-top 1s both;
 }
@@ -427,26 +440,37 @@ article
             transform: translateX(-100px);
   }
 }
-
+.check-circle
+{
+	background-color: #99E2D0;
+	padding: 2em;
+	margin-top: -2em;
+	margin-bottom: -2em;
+}
 .fa-check-circle
 {
 	color: white;
-	font-size: 2em;
-	cursor: pointer;
 	background-color: #99E2D0;
-	padding: 1em;
+	margin: 50%;
+	font-size: 2em;
 	position: relative;
-	top: -85px;
-	left: 110px;
+	top: 0px;
+	left: -15px;
 }
 .fa-check-circle:hover
 {   
-	-webkit-animation: rotate-center 0.6s ease-in-out reverse both;
-	        animation: rotate-center 0.6s ease-in-out reverse both;
+	-webkit-animation: rotate-center 0.6s ease-in-out both;
+	        animation: rotate-center 0.6s ease-in-out both;
 }
 
-.plats__prix:hover
+.plats__choix--slide:hover
 {
 		-webkit-animation: slide-left 0.5s both;
 	        	animation: slide-left 0.5s both;
+}
+.plats__choix--slide
+{
+	display: flex;
+	flex-direction: row;
+	margin-right: -6.8em;
 }
