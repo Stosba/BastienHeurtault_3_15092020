@@ -129,7 +129,7 @@ header h1
 h2
 {
 	text-align: left;
-	margin-left: 10%;
+	margin-left: 5%;
 	padding-top: 2em;
 	margin-top: -1em;
 }
@@ -244,11 +244,6 @@ a
 {
 	display: flex;
 	flex-direction: row;
-}
-#restaurants h2
-{
-	text-align: left;
-	margin-left: 1em;
 }
 #restaurants img
 {
