@@ -8,62 +8,160 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="Image/png" href="Images/Photo_Bastien.png" />
 </head>
 
 <body>
 	<!--Header (présent sur toutes les pages)!-->
-	<header>
+	<header id="menus">
 		<a href="Ohmyfood!_Accueil.html"><i class="fas fa-arrow-left"></i></a>
-		<h1>ohmyfood</h1><img src="images/logo/ohmyfood.png">
-		<p><img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"></p>
+		<h1>ohmyfood</h1>
 	</header>
-
-	<!--Page 4 Le Gourmand!-->
-	<main id="Gourmand">
-		<h3>Le délice des sens</h3>
+	<aside id="délicedesenspic">
+		<!--photos délcie des sens!-->
+	</aside>
+	<!--Page 1 Le délice des sens!-->
+	<main id="Le_délice_des_sens">
+		<section id="titre">
+			<h3>Le délice des sens</h3>
+			<div class="coeur">
+				<i class="far fa-heart"></i><i class="fas fa-heart"></i>
+			</div>
+		</section>
+		
 		<!--Entrées!-->
 		<section class="plats">
-			<h4>ENTREES</h4>
-			<div class="plats__choix">
-				<p><b>Tartare de thon</b><br>Assaisonné au yuzu</p>
-			</div>
-			<div class="plats__choix">
-				<p><b>Bouchée de homard croustillant</b><br>Et sa farandole de petits légumes</p>
-			</div>
-			<div class="plats__choix">
-				<p><b>Velouté de cèpes</b><br>Aux truffes</p>
-			</div>
+			<h4><span class="sst">ENTR</span>ÉES</h4>
+			<article class="art1">
+				<div class="plats__choix">
+					<p><b>Tartare de thon</b><br>Assaisonné au yuzu</p>
+				</div>
+				<div class="plats__choix--slide">
+					<div class="plats__prix">
+						<p><b>25€</b></p>
+					</div>
+					<div class="check-circle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+				</div>
+			</article>
+			<article class="art2">
+				<div class="plats__choix">
+					<p><b>Bouchée de homard croustillant</b><br>Et sa farandole de petits légumes</p>
+				</div>
+				<div class="plats__choix--slide">
+					<div class="plats__prix">
+						<p><b>35€</b></p>
+					</div>
+					<div class="check-circle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+				</div>
+			</article>
+			<article class="art3">
+				<div class="plats__choix">
+					<p><b>Velouté de cèpes</b><br>Aux truffes</p>
+				</div>
+				<div class="plats__choix--slide">
+					<div class="plats__prix">
+						<p><b>20€</b></p>
+					</div>
+					<div class="check-circle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+				</div>
+			</article>
 		</section>
+
 		<!--Plats!-->
 		<section class="plats">
-			<h4>PLATS</h4>
-			<div class="plats__choix">
-				<p><b>Poulet rôti aux herbes de provence</b><br>Et sa crème de truffe</p>
-			</div>
-			<div class="plats__choix">
-				<p><b>Langouste rôtie</b><br>Et ses légumes de saison</p>
-			</div>
-			<div class="plats__choix">
-				<p><b>Côte de boeuf angus</b><br>Et sa purée de panais</p>
-			</div>
+			<h4><span class="sst">PLAT</span>S</h4>
+			<article class="art1">
+				<div class="plats__choix">
+					<p><b>Poulet rôti aux herbes de provence</b><br>Et sa crème de truffe</p>
+				</div>
+				<div class="plats__choix--slide">
+					<div class="plats__prix">
+						<p><b>40€</b></p>
+					</div>
+					<div class="check-circle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+				</div>
+			</article>
+			<article class="art2">
+				<div class="plats__choix">
+					<p><b>Langouste rôtie</b><br>Et ses légumes de saison</p>
+				</div>
+				<div class="plats__choix--slide">
+					<div class="plats__prix">
+						<p><b>35€</b></p>
+					</div>
+					<div class="check-circle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+				</div>
+			</article>
+			<article class="art3">
+				<div class="plats__choix">
+					<p><b>Côte de boeuf angus</b><br>Et sa purée de panais</p>
+				</div>
+				<div class="plats__choix--slide">
+					<div class="plats__prix">
+						<p><b>44€</b></p>
+					</div>
+					<div class="check-circle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+				</div>
+			</article>
 		</section>
+
 		<!--Desserts!-->
 		<section class="plats">
-			<h4>DESSERTS</h4>
-			<div class="plats__choix">
-				<p><b>Farandole de desserts</b><br>Du chef</p>
-			</div>
-			<div class="plats__choix">
+			<h4><span class="sst">DESS</span>ERTS</h4>
+			<article class="art1">
+				<div class="plats__choix">
+					<p><b>Farandole de desserts</b><br>Du chef</p>
+				</div>
+				<div class="plats__choix--slide">
+					<div class="plats__prix">
+						<p><b>18€</b></p>
+					</div>
+					<div class="check-circle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+				</div>
+			</article>
+			<article class="art2">	
+				<div class="plats__choix">
 				<p><b>Crème brulée</b><br>Revisitée</p>
-			</div>
-			<div class="plats__choix">
-				<p><b>Tiramisu</b><br>A la noisette</p>
-			</div>
+				</div>
+				<div class="plats__choix--slide">
+					<div class="plats__prix">
+						<p><b>22€</b></p>
+					</div>
+					<div class="check-circle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+				</div>
+			</article>
+			<article class="art3">
+				<div class="plats__choix">
+					<p><b>Tiramisu</b><br>A la noisette</p>
+				</div>
+				<div class="plats__choix--slide">
+					<div class="plats__prix">
+						<p><b>23€</b></p>
+					</div>
+					<div class="check-circle">
+						<i class="fas fa-check-circle"></i>
+					</div>
+				</div>
+			</article>
 		</section>
 
 		<!--Bouton de commande!-->
-		<div class="order">
+		<div class="commander">
 			<p>Commander</p>
 		</div>
 	</main>
