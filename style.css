@@ -1,6 +1,86 @@
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #fff;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
 body
 {
-	max-width: 720px;
+	max-width: 728px;
 	margin: auto;
 }
 *
@@ -22,6 +102,7 @@ header h1
 {
 	font-family: 'Shrikhand';
 	text-align: center;
+	margin: 0em;
 }
 
 /*Accueil*/
@@ -31,17 +112,25 @@ header h1
 	background-color: #eaeaea;
 	border-top: 3px #dcdcdc solid;
 	padding: 1em;
+	padding-bottom: 1.5em;
 }
 #accueil__explorer
 {
 	background-color: #f6f6f6;
 	text-align: center;
+	padding-bottom: 3em;
+}
+#accueil__explorer h2
+{
+	text-align: center;
+	margin: auto;
+	margin-top: -1em;
 }
 h2
 {
-	margin-right: 10%;
-	margin-left: 10%;
-	padding-top: 1em;
+	text-align: left;
+	margin-left: 5%;
+	padding-top: 2em;
 	margin-top: -1em;
 }
 h2 + p
@@ -68,6 +157,10 @@ a
 {
 	padding: 1em;
 }
+.accueil__explorer--btn a, footer a
+{
+	color: white;
+}
 
 /*fonctionnement*/
 #fonctionnement
@@ -75,40 +168,29 @@ a
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	margin: 10% 3% 10% 3%;
-}
-#fonctionnement h2
-{
-	text-align: left;
-	margin-left: 3px;
+	margin: 10% 0% 10% 0%;
+	padding-bottom: 2em;
 }
 .choix
 {
 	display: flex;
 	flex-direction: row;
-	width: 80%;
-	margin: 1em auto;
-	background-color: #f6f6f6;
-	border-radius: 20px 20px 20px 20px;
-	box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.20);
 	cursor: pointer;
-}
-.choix:hover
-{
-	color: #9356DC;
-	background-color: #f5edff;
+	margin: 1em 1em;
 }
 .choix p
 {
 	color: black;
-	text-align: left;
-	width: 75%;
+	text-align: center;
+	margin: auto;
+	margin-left: 0em;
 }
 .choix i
 {
 	padding: 4.5%;
 	text-align: right;
-	width: 25%;
+	margin: auto;
+	margin-right: 0em;
 }
 .choix__num p
 {
@@ -117,22 +199,37 @@ a
 	background-color: #9356DC;	
 	border-radius: 50%;
 	width: 20px;
-	margin-left: -50%;
-	margin-top: 1.5em;
+	margin:100% 50%;
 	padding: 0.4em;
+}
+.choix__num
+{
+	z-index: 2;
 }
 .choix__fonct
 {
 	display: flex;
 	flex-direction: row;
-	width: 80%;
 	padding: 3%;
+	background-color: #f6f6f6;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.20);
+	width:80%;
+	z-index: 1;
+}
+.choix__fonct:hover
+{
+	color: #9356DC;
+	background-color: #f5edff;
+	box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.30);
 }
 
 /*Restaurants*/
 #restaurants
 {
 	background-color: #f6f6f6;
+	margin-bottom: -1em;
+	padding-bottom: 3em;
 }
 .liste
 {
@@ -142,16 +239,12 @@ a
 	margin: 1em;
 	border-radius: 20px 20px 20px 20px;
 	box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.20);
+	padding-bottom: 0.5em;
 }
 .liste__description
 {
 	display: flex;
 	flex-direction: row;
-}
-#restaurants h2
-{
-	text-align: left;
-	margin-left: 1em;
 }
 #restaurants img
 {
@@ -159,6 +252,11 @@ a
 	height: 200px;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
+	background-size: cover;
+}
+#restaurants p
+{
+	color: black;
 }
 .nom
 {
@@ -186,14 +284,6 @@ a
 {
 	opacity: 100%;
 }
-.coeur .fas:enabled
-{
-	opacity: 100%;
-}
-.coeur .fas:visited
-{
-	opacity: 100%;
-}
 
 /*Footer*/
 h5
@@ -201,6 +291,7 @@ h5
 	font-family: 'Shrikhand';
 	color: white;
 	font-size: 1em;
+	margin: 1em 0em;
 }
 footer
 {
@@ -210,6 +301,7 @@ footer
 footer p
 {
 	color: white;
+	line-height: 1em;
 }
 footer i
 {
@@ -219,14 +311,14 @@ footer i
 
 
 /*Pages de menu*/
-#palettedugout
+#La_palette_du_gout, #La_note_enchantée, #A_la_française, #Le_délice_des_sens
 {
 	background-color: #f6f6f6;
 	border-top-right-radius: 40px;
 	border-top-left-radius: 40px;
 	margin-top: -10em;
 }
-#palettedugout section
+#La_palette_du_gout section, #La_note_enchantée section, #A_la_française section, #Le_délice_des_sens section
 {
 	margin-left: 3%;
 	margin-right: 3%;
@@ -239,25 +331,40 @@ footer i
 header a
 {
 	font-size: 1.5em;
-	width: 10%;
-	margin-top: 1.3em;
-	margin-left: 3%;
+	margin: 5%;
 }
 #menus h1
 {
-	width: 90%;
-	margin-left: -7%;
+	margin-left: -14%;
+	padding: 4%;
+	flex-grow: 1;
 }
 aside
 {
-	height: 20em;
-	width: 100%;
 	background-repeat: no-repeat;
 	background-size: 100%;
+	width: 100%;
+	height: 32em;
 }
 #palettepic
 {
 	background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+	height: 32em;
+}
+#noteenchanteepic
+{
+	background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+	height: 32em;
+}
+#alafrançaisepic
+{
+	background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+	height: 37em;
+}
+#délicedesenspic
+{
+	background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+	height: 38em;
 }
 
 /*titre*/
@@ -275,7 +382,7 @@ aside
 }
 h3
 {
-	width: 80%;
+	flex-grow: 1;
 	font-family: 'Shrikhand';
 	font-size: 1.5em;
 }
@@ -295,6 +402,8 @@ article
 	margin-bottom: 1em;
 	position: relative;
 	top: 100px;
+	overflow: hidden;
+	cursor: pointer;
 }
 .commander p
 {
@@ -309,24 +418,30 @@ article
 	margin-top: 2em;
 	margin-bottom: 2em;
 	text-align: center;
+	cursor: pointer;
 }
 .commander
 {
 	background-color: #f6f6f6;
 	margin-bottom: -2em;
 	padding-bottom: 2em;
+	color: white;
 }
 .plats__choix
 {
-	width: 90%;
+	flex-grow: 1;
 }
 .plats__choix p
 {
-	margin: 0.5em;
+	margin: 1%;
+  	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
 }
 .plats__prix 
 {
 	height: 1em;
+	margin-right: 2em;
 }
 .plats__prix p
 {
@@ -363,16 +478,22 @@ article
 }
 .art1
 {
+	display: flex;
+	flex-direction: row;
 	-webkit-animation: slide-top 0.5s both;
 	        animation: slide-top 0.5s both;
 }
 .art2
-{
+{	
+	display: flex;
+	flex-direction: row;
 	-webkit-animation: slide-top 0.7s both;
 	        animation: slide-top 0.7s both;
 }
 .art3
 {
+	display: flex;
+	flex-direction: row;
 	-webkit-animation: slide-top 1s both;
 	        animation: slide-top 1s both;
 }
@@ -420,26 +541,70 @@ article
             transform: translateX(-100px);
   }
 }
-
+.check-circle
+{
+	background-color: #99E2D0;
+	padding: 2em;
+	margin-top: -2em;
+	margin-bottom: -2em;
+}
 .fa-check-circle
 {
 	color: white;
-	font-size: 2em;
-	cursor: pointer;
 	background-color: #99E2D0;
-	padding: 0.6em;
+	margin: 50%;
+	font-size: 2em;
 	position: relative;
-	top: -80px;
-	left: 100px;
+	top: 0px;
+	left: -15px;
 }
 .fa-check-circle:hover
 {   
-	-webkit-animation: rotate-center 0.6s ease-in-out reverse both;
-	        animation: rotate-center 0.6s ease-in-out reverse both;
+	-webkit-animation: rotate-center 0.6s ease-in-out both;
+	        animation: rotate-center 0.6s ease-in-out both;
 }
 
-.plats__prix:hover
+.plats__choix--slide:hover
 {
 		-webkit-animation: slide-left 0.5s both;
 	        	animation: slide-left 0.5s both;
 }
+.plats__choix--slide
+{
+	display: flex;
+	flex-direction: row;
+	margin-right: -6.8em;
+}
+
+@media screen and (max-width: 425px) {
+  img
+  {
+    height: 1em;
+  }
+  aside
+  {
+  	height: 25em;
+  }
+ }
+
+ @media screen and (max-width: 375px) {
+  img
+  {
+    height: 1em;
+  }
+  aside
+  {
+  	height: 22em;
+  }
+ }
+
+ @media screen and (max-width: 320px) {
+  img
+  {
+    height: 1em;
+  }
+  aside
+  {
+  	height: 20em;
+  }
+ }
