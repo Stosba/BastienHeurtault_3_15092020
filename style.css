@@ -252,9 +252,10 @@ a
 	height: 200px;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
-	background-size: cover;
+	object-fit: cover;
+	object-position: center;
 }
-#restaurants p
+#restaurants p a
 {
 	color: black;
 }
@@ -324,47 +325,50 @@ footer i
 	margin-right: 3%;
 }
 #menus
-{
-	display: flex;
+{	
+	display: block;
 	flex-direction: row;
 }
-header a
+#menus a
 {
-	font-size: 1.5em;
-	margin: 5%;
+	width: 10%;
 }
 #menus h1
-{
+{	
+	width: 90%;
 	margin-left: -14%;
-	padding: 4%;
-	flex-grow: 1;
+	padding-top: 4%;
+	padding-bottom: 4%;
 }
 aside
 {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	width: 100%;
-	height: 32em;
 }
 #palettepic
 {
 	background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 	height: 32em;
+	background-position: top;
 }
 #noteenchanteepic
 {
 	background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 	height: 32em;
+	background-position: center;
 }
 #alafrançaisepic
 {
 	background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-	height: 37em;
+	height: 32em;
+	background-position: top;
 }
 #délicedesenspic
 {
 	background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-	height: 38em;
+	height: 35em;
+	background-position: top;
 }
 
 /*titre*/
@@ -448,10 +452,10 @@ article
 	margin-top: 2em;
 }
 
- * ----------------------------------------
- * animations
- * ----------------------------------------
- */
+ /*Animation*/
+
+/*Animations slide top*/
+
 @-webkit-keyframes slide-top {
   0% {
     -webkit-transform: translateY(0);
@@ -476,21 +480,21 @@ article
              opacity: 100%;
   }
 }
-.art1
+.animation-slide-top-1
 {
 	display: flex;
 	flex-direction: row;
 	-webkit-animation: slide-top 0.5s both;
 	        animation: slide-top 0.5s both;
 }
-.art2
+.animation-slide-top-2
 {	
 	display: flex;
 	flex-direction: row;
 	-webkit-animation: slide-top 0.7s both;
 	        animation: slide-top 0.7s both;
 }
-.art3
+.animation-slide-top-3
 {
 	display: flex;
 	flex-direction: row;
@@ -498,6 +502,7 @@ article
 	        animation: slide-top 1s both;
 }
 
+/*Animations slide + rotate*/
 
 @-webkit-keyframes rotate-center {
   0% {
@@ -558,13 +563,13 @@ article
 	top: 0px;
 	left: -15px;
 }
-.fa-check-circle:hover
+article:hover .fa-check-circle
 {   
 	-webkit-animation: rotate-center 0.6s ease-in-out both;
 	        animation: rotate-center 0.6s ease-in-out both;
 }
 
-.plats__choix--slide:hover
+article:hover .plats__choix--slide
 {
 		-webkit-animation: slide-left 0.5s both;
 	        	animation: slide-left 0.5s both;
@@ -576,35 +581,94 @@ article
 	margin-right: -6.8em;
 }
 
+/*Media query*/
+
 @media screen and (max-width: 425px) {
-  img
+
+  #palettepic
   {
-    height: 1em;
+  	background-size: 100%;
+  	height: 25em;
   }
-  aside
+   #noteenchanteepic
   {
+  	background-position: bottom;
+  	background-size: 100%;
+  	height: 25em;
+  }
+  #alafrançaisepic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 25em;
+  }
+  #délicedesenspic
+  {
+  	background-position: top;
+  	background-size: 100%;
   	height: 25em;
   }
  }
 
- @media screen and (max-width: 375px) {
-  img
+@media screen and (max-width: 375px) {
+
+  #palettepic
   {
-    height: 1em;
-  }
-  aside
-  {
+  	background-size: 100%;
   	height: 22em;
+  }
+  #noteenchanteepic
+  {
+  	background-position: bottom;
+  	background-size: 100%;
+  	height: 22em;
+  }
+   #alafrançaisepic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 22em;
+  }
+   #délicedesenspic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 22em;
+  }
+  .plats__choix
+  {
+  	width: 5em;
   }
  }
 
  @media screen and (max-width: 320px) {
-  img
+
+  #palettepic
   {
-    height: 1em;
-  }
-  aside
-  {
+  	background-position: top;
+  	background-size: 100%;
   	height: 20em;
+  }
+  #noteenchanteepic
+  {
+  	background-position: bottom;
+  	background-size: 100%;
+  	height: 20em;
+  }
+   #alafrançaisepic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 20em;
+  }
+   #délicedesenspic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 20em;
+  }
+  .plats__choix
+  {
+  	width: 5em;
   }
  }
