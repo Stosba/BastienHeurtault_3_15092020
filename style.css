@@ -1,83 +1,3 @@
-.lds-spinner {
-  color: official;
-  display: inline-block;
-  position: relative;
-  width: auto;
-  height: auto;
-}
-.lds-spinner div {
-  transform-origin: 40px 40px;
-  animation: lds-spinner 2s linear infinite;
-}
-.lds-spinner div:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 3px;
-  left: 37px;
-  width: 6px;
-  height: 18px;
-  border-radius: 20%;
-  background: #fff;
-}
-.lds-spinner div:nth-child(1) {
-  transform: rotate(0deg);
-  animation-delay: -1.1s;
-}
-.lds-spinner div:nth-child(2) {
-  transform: rotate(30deg);
-  animation-delay: -1s;
-}
-.lds-spinner div:nth-child(3) {
-  transform: rotate(60deg);
-  animation-delay: -0.9s;
-}
-.lds-spinner div:nth-child(4) {
-  transform: rotate(90deg);
-  animation-delay: -0.8s;
-}
-.lds-spinner div:nth-child(5) {
-  transform: rotate(120deg);
-  animation-delay: -0.7s;
-}
-.lds-spinner div:nth-child(6) {
-  transform: rotate(150deg);
-  animation-delay: -0.6s;
-}
-.lds-spinner div:nth-child(7) {
-  transform: rotate(180deg);
-  animation-delay: -0.5s;
-}
-.lds-spinner div:nth-child(8) {
-  transform: rotate(210deg);
-  animation-delay: -0.4s;
-}
-.lds-spinner div:nth-child(9) {
-  transform: rotate(240deg);
-  animation-delay: -0.3s;
-}
-.lds-spinner div:nth-child(10) {
-  transform: rotate(270deg);
-  animation-delay: -0.2s;
-}
-.lds-spinner div:nth-child(11) {
-  transform: rotate(300deg);
-  animation-delay: -0.1s;
-}
-.lds-spinner div:nth-child(12) {
-  transform: rotate(330deg);
-  animation-delay: 0s;
-}
-@keyframes lds-spinner {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-
 body
 {
 	max-width: 728px;
@@ -103,6 +23,10 @@ header h1
 	font-family: 'Shrikhand';
 	text-align: center;
 	margin: 0em;
+}
+#header_accueil
+{
+	margin-top: 5%;
 }
 
 /*Accueil*/
@@ -252,9 +176,10 @@ a
 	height: 200px;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
-	background-size: cover;
+	object-fit: cover;
+	object-position: center;
 }
-#restaurants p
+#restaurants p a
 {
 	color: black;
 }
@@ -325,46 +250,50 @@ footer i
 }
 #menus
 {
-	display: flex;
-	flex-direction: row;
+	margin-top: -2em;
 }
-header a
-{
+#menus i
+{	
+	color: black;
 	font-size: 1.5em;
-	margin: 5%;
+	position: relative;
+	top: 65px;
+	left: 10px;
 }
 #menus h1
-{
-	margin-left: -14%;
-	padding: 4%;
-	flex-grow: 1;
+{	
+	padding-top: 4%;
+	padding-bottom: 4%;
 }
 aside
 {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	width: 100%;
-	height: 32em;
 }
 #palettepic
 {
 	background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 	height: 32em;
+	background-position: top;
 }
 #noteenchanteepic
 {
 	background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 	height: 32em;
+	background-position: center;
 }
 #alafrançaisepic
 {
 	background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-	height: 37em;
+	height: 32em;
+	background-position: top;
 }
 #délicedesenspic
 {
 	background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-	height: 38em;
+	height: 35em;
+	background-position: top;
 }
 
 /*titre*/
@@ -448,10 +377,10 @@ article
 	margin-top: 2em;
 }
 
- * ----------------------------------------
- * animations
- * ----------------------------------------
- */
+ /*Animations*/
+
+/*Animations slide top*/
+
 @-webkit-keyframes slide-top {
   0% {
     -webkit-transform: translateY(0);
@@ -476,21 +405,21 @@ article
              opacity: 100%;
   }
 }
-.art1
+.animation-slide-top-1
 {
 	display: flex;
 	flex-direction: row;
 	-webkit-animation: slide-top 0.5s both;
 	        animation: slide-top 0.5s both;
 }
-.art2
+.animation-slide-top-2
 {	
 	display: flex;
 	flex-direction: row;
 	-webkit-animation: slide-top 0.7s both;
 	        animation: slide-top 0.7s both;
 }
-.art3
+.animation-slide-top-3
 {
 	display: flex;
 	flex-direction: row;
@@ -498,6 +427,7 @@ article
 	        animation: slide-top 1s both;
 }
 
+/*Animations slide + rotate*/
 
 @-webkit-keyframes rotate-center {
   0% {
@@ -558,13 +488,13 @@ article
 	top: 0px;
 	left: -15px;
 }
-.fa-check-circle:hover
+article:hover .fa-check-circle
 {   
 	-webkit-animation: rotate-center 0.6s ease-in-out both;
 	        animation: rotate-center 0.6s ease-in-out both;
 }
 
-.plats__choix--slide:hover
+article:hover .plats__choix--slide
 {
 		-webkit-animation: slide-left 0.5s both;
 	        	animation: slide-left 0.5s both;
@@ -576,35 +506,153 @@ article
 	margin-right: -6.8em;
 }
 
-@media screen and (max-width: 425px) {
-  img
+/*Media query*/
+
+@media screen and (max-width: 540px) {
+
+	#palettepic
   {
-    height: 1em;
+  	background-size: 100%;
+  	height: 27em;
   }
-  aside
+   #noteenchanteepic
   {
+  	background-position: bottom;
+  	background-size: 100%;
+  	height: 27em;
+  }
+  #alafrançaisepic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 27em;
+  }
+  #délicedesenspic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 27em;
+  }
+  #menus i
+{	
+	color: black;
+	font-size: 1.5em;
+	position: relative;
+	top: 55px;
+	left: 10px;
+}
+}
+
+@media screen and (max-width: 425px) {
+
+  #palettepic
+  {
+  	background-size: 100%;
   	height: 25em;
   }
+   #noteenchanteepic
+  {
+  	background-position: bottom;
+  	background-size: 100%;
+  	height: 25em;
+  }
+  #alafrançaisepic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 25em;
+  }
+  #délicedesenspic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 25em;
+  }
+  #menus i
+{	
+	color: black;
+	font-size: 1.5em;
+	position: relative;
+	top: 52px;
+	left: 10px;
+}
  }
 
- @media screen and (max-width: 375px) {
-  img
+@media screen and (max-width: 375px) {
+
+  #palettepic
   {
-    height: 1em;
-  }
-  aside
-  {
+  	background-size: 100%;
   	height: 22em;
   }
+  #noteenchanteepic
+  {
+  	background-position: bottom;
+  	background-size: 100%;
+  	height: 22em;
+  }
+   #alafrançaisepic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 22em;
+  }
+   #délicedesenspic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 22em;
+  }
+  .plats__choix
+  {
+  	width: 5em;
+  }
+  #menus i
+{	
+	color: black;
+	font-size: 1.5em;
+	position: relative;
+	top: 50px;
+	left: 10px;
+}
  }
 
  @media screen and (max-width: 320px) {
-  img
+
+  #palettepic
   {
-    height: 1em;
-  }
-  aside
-  {
+  	background-position: top;
+  	background-size: 100%;
   	height: 20em;
   }
+  #noteenchanteepic
+  {
+  	background-position: bottom;
+  	background-size: 100%;
+  	height: 20em;
+  }
+   #alafrançaisepic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 20em;
+  }
+   #délicedesenspic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 20em;
+  }
+  .plats__choix
+  {
+  	width: 5em;
+  }
+  #menus i
+{	
+	color: black;
+	font-size: 1.5em;
+	position: relative;
+	top: 48px;
+	left: 10px;
+}
  }
