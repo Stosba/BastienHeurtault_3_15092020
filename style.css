@@ -1,83 +1,3 @@
-.lds-spinner {
-  color: official;
-  display: inline-block;
-  position: relative;
-  width: auto;
-  height: auto;
-}
-.lds-spinner div {
-  transform-origin: 40px 40px;
-  animation: lds-spinner 2s linear infinite;
-}
-.lds-spinner div:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 3px;
-  left: 37px;
-  width: 6px;
-  height: 18px;
-  border-radius: 20%;
-  background: #fff;
-}
-.lds-spinner div:nth-child(1) {
-  transform: rotate(0deg);
-  animation-delay: -1.1s;
-}
-.lds-spinner div:nth-child(2) {
-  transform: rotate(30deg);
-  animation-delay: -1s;
-}
-.lds-spinner div:nth-child(3) {
-  transform: rotate(60deg);
-  animation-delay: -0.9s;
-}
-.lds-spinner div:nth-child(4) {
-  transform: rotate(90deg);
-  animation-delay: -0.8s;
-}
-.lds-spinner div:nth-child(5) {
-  transform: rotate(120deg);
-  animation-delay: -0.7s;
-}
-.lds-spinner div:nth-child(6) {
-  transform: rotate(150deg);
-  animation-delay: -0.6s;
-}
-.lds-spinner div:nth-child(7) {
-  transform: rotate(180deg);
-  animation-delay: -0.5s;
-}
-.lds-spinner div:nth-child(8) {
-  transform: rotate(210deg);
-  animation-delay: -0.4s;
-}
-.lds-spinner div:nth-child(9) {
-  transform: rotate(240deg);
-  animation-delay: -0.3s;
-}
-.lds-spinner div:nth-child(10) {
-  transform: rotate(270deg);
-  animation-delay: -0.2s;
-}
-.lds-spinner div:nth-child(11) {
-  transform: rotate(300deg);
-  animation-delay: -0.1s;
-}
-.lds-spinner div:nth-child(12) {
-  transform: rotate(330deg);
-  animation-delay: 0s;
-}
-@keyframes lds-spinner {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-
 body
 {
 	max-width: 728px;
@@ -103,6 +23,10 @@ header h1
 	font-family: 'Shrikhand';
 	text-align: center;
 	margin: 0em;
+}
+#header_accueil
+{
+	margin-top: 5%;
 }
 
 /*Accueil*/
@@ -325,18 +249,19 @@ footer i
 	margin-right: 3%;
 }
 #menus
-{	
-	display: block;
-	flex-direction: row;
-}
-#menus a
 {
-	width: 10%;
+	margin-top: -2em;
+}
+#menus i
+{	
+	color: black;
+	font-size: 1.5em;
+	position: relative;
+	top: 65px;
+	left: 10px;
 }
 #menus h1
 {	
-	width: 90%;
-	margin-left: -14%;
 	padding-top: 4%;
 	padding-bottom: 4%;
 }
@@ -452,7 +377,7 @@ article
 	margin-top: 2em;
 }
 
- /*Animation*/
+ /*Animations*/
 
 /*Animations slide top*/
 
@@ -583,6 +508,41 @@ article:hover .plats__choix--slide
 
 /*Media query*/
 
+@media screen and (max-width: 540px) {
+
+	#palettepic
+  {
+  	background-size: 100%;
+  	height: 27em;
+  }
+   #noteenchanteepic
+  {
+  	background-position: bottom;
+  	background-size: 100%;
+  	height: 27em;
+  }
+  #alafrançaisepic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 27em;
+  }
+  #délicedesenspic
+  {
+  	background-position: top;
+  	background-size: 100%;
+  	height: 27em;
+  }
+  #menus i
+{	
+	color: black;
+	font-size: 1.5em;
+	position: relative;
+	top: 55px;
+	left: 10px;
+}
+}
+
 @media screen and (max-width: 425px) {
 
   #palettepic
@@ -608,6 +568,14 @@ article:hover .plats__choix--slide
   	background-size: 100%;
   	height: 25em;
   }
+  #menus i
+{	
+	color: black;
+	font-size: 1.5em;
+	position: relative;
+	top: 52px;
+	left: 10px;
+}
  }
 
 @media screen and (max-width: 375px) {
@@ -639,6 +607,14 @@ article:hover .plats__choix--slide
   {
   	width: 5em;
   }
+  #menus i
+{	
+	color: black;
+	font-size: 1.5em;
+	position: relative;
+	top: 50px;
+	left: 10px;
+}
  }
 
  @media screen and (max-width: 320px) {
@@ -671,4 +647,12 @@ article:hover .plats__choix--slide
   {
   	width: 5em;
   }
+  #menus i
+{	
+	color: black;
+	font-size: 1.5em;
+	position: relative;
+	top: 48px;
+	left: 10px;
+}
  }
