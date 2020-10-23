@@ -23,7 +23,7 @@ $color-ter: #99E2D0;
 */
 
 /*loading-spinner*/
-header, #accueil, footer
+#header_accueil, #accueil, #footer_accueil
 {
 	  -webkit-animation: fade-in 15s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in 15s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
