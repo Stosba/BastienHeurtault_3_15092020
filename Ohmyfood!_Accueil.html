@@ -21,6 +21,10 @@ Cible
 Classes moyennes et supérieures, connectées et souvent pressées, souhaitant déguster des produits de qualité.!-->
 
 <body>
+	<!-- loading spinner !-->
+	<div id="loading_page">
+		<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+	</div>
 	<!--Header (présent sur toutes les pages)!-->
 	<header id="header_accueil">
 		<h1>ohmyfood</h1>
@@ -29,7 +33,7 @@ Classes moyennes et supérieures, connectées et souvent pressées, souhaitant d
 	<!--Page d'accueil https://stosba.github.io/BastienHeurtault_3_15092020/Ohmyfood!_Accueil.html!-->
 	<main id="accueil">	
 		<section id="accueil__localisation">
-			<p><i class="fas fa-map-marker-alt"></i> <b>Paris, Belleville</b></p>
+			<p><i class="fas fa-map-marker-alt"></i> <span class="bold_txt">Paris, Belleville</span></p>
 		</section>
 		<section id="accueil__explorer">
 			<h2>Réservez le menu qui vous convient</h2>
@@ -45,7 +49,7 @@ Classes moyennes et supérieures, connectées et souvent pressées, souhaitant d
 					<p>1</p>
 				</div>
 				<div class="choix__fonct">
-					<i class="fas fa-mobile-alt"></i><p><b>Choisissez un restaurant</b></p>
+					<i class="fas fa-mobile-alt"></i><p><span class="bold_txt">Choisissez un restaurant</span></p>
 				</div>				
 			</div>
 			<div class="choix">
@@ -53,7 +57,7 @@ Classes moyennes et supérieures, connectées et souvent pressées, souhaitant d
 					<p>2</p>
 				</div>
 				<div class="choix__fonct">
-					<i class="fas fa-list-ul"></i><p><b>Composez votre menu</b></p>
+					<i class="fas fa-list-ul"></i><p><span class="bold_txt">Composez votre menu</span></p>
 				</div>
 			</div>
 			<div class="choix">
@@ -61,7 +65,7 @@ Classes moyennes et supérieures, connectées et souvent pressées, souhaitant d
 					<p>3</p>
 				</div>
 				<div class="choix__fonct">
-					<i class="fas fa-store"></i><p><b>Dégustez au restaurant</b></p>
+					<i class="fas fa-store"></i><p><span class="bold_txt">Dégustez au restaurant</span></p>
 				</div>
 			</div>
 		</section>
@@ -69,11 +73,12 @@ Classes moyennes et supérieures, connectées et souvent pressées, souhaitant d
 			<h2>Restaurants</h2>
 			<div class="liste">
 				<div class="liste__restau">
-					<img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo_palette_du_gout">				
+					<img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo_palette_du_gout">
+					<span class="encart_nouveau">Nouveau</span>				
 				</div>
 				<div class="liste__description">
 					<div class="nom">
-						<p><strong><a href="Ohmyfood!_La_palette_du_goût.html">La palette du goût</a></strong><br>Ménilmontant</p>
+						<p><span class="bold_txt"><a href="Ohmyfood!_La_palette_du_goût.html">La palette du goût</a></span><br>Ménilmontant</p>
 					</div>
 					<div class="coeur">
 						<i class="far fa-heart"></i><i class="fas fa-heart"></i>
@@ -83,10 +88,11 @@ Classes moyennes et supérieures, connectées et souvent pressées, souhaitant d
 			<div class="liste">
 				<div class="liste__restau">
 					<img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo_note_enchantée">
+					<span class="encart_nouveau">Nouveau</span>
 				</div>
 				<div class="liste__description">
 					<div class="nom">
-						<p><strong><a href="Ohmyfood!_La_note_enchantée.html">La note enchantée</a></strong><br>Charonne</p>
+						<p><span class="bold_txt"><a href="Ohmyfood!_La_note_enchantée.html">La note enchantée</a></span><br>Charonne</p>
 					</div>
 					<div class="coeur">
 						<i class="far fa-heart"></i><i class="fas fa-heart"></i>
@@ -100,12 +106,12 @@ Classes moyennes et supérieures, connectées et souvent pressées, souhaitant d
 				<div class="liste__description">
 					<div class="nom">
 						<a href="Ohmyfood!_A_la_française.html"></a>
-						<p><strong><a href="Ohmyfood!_A_la_française.html">A la française</a></strong><br>Cité Rouge</p>
+						<p><span class="bold_txt"><a href="Ohmyfood!_A_la_française.html">A la française</a></span><br>Cité Rouge</p>
 					</div>
 					<div class="coeur">
 						<i class="far fa-heart"></i><i class="fas fa-heart"></i>
-					</div>
 				</div>
+					</div>
 			</div>
 			<div class="liste">
 				<div class="liste__restau">
@@ -114,7 +120,7 @@ Classes moyennes et supérieures, connectées et souvent pressées, souhaitant d
 				<div class="liste__description">
 					<div class="nom">
 						<a href="Ohmyfood!_Le_délice_des_sens.html"></a>
-						<p><strong><a href="Ohmyfood!_Le délice des sens.html">Le délice des sens</a></strong><br>Folie-Méricourt</p>
+						<p><span class="bold_txt"><a href="Ohmyfood!_Le_délice_des_sens.html">Le délice des sens</a></span><br>Folie-Méricourt</p>
 					</div>
 					<div class="coeur">
 						<i class="far fa-heart"></i><i class="fas fa-heart"></i>
