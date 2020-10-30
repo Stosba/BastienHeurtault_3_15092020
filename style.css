@@ -31,8 +31,7 @@ $color-ter: #99E2D0;
 
 #loading_page
 {
-  background-color: #9356DC;
-  color: #9356DC;
+  background-color: #99E2D0;
   display: inline-block;
   position: absolute;
   top: 0%;
@@ -49,7 +48,7 @@ $color-ter: #99E2D0;
 	color: official;
   display: inline-block;
   position: relative;
-  top: 50%;
+  top: 15%;
   left: 45%;
   width: 80px;
   height: 80px;
@@ -656,6 +655,14 @@ article:hover .plats__choix--slide
 
 @media screen and (max-width: 540px) {
 
+	#loading_page
+	{
+		width: 540px;
+	}
+	.lds-spinner 
+  {
+  	left: 40%;
+  }
 	#palettepic
   {
   	background-size: 100%;
@@ -691,6 +698,10 @@ article:hover .plats__choix--slide
 
 @media screen and (max-width: 425px) {
 
+	#loading_page
+	{
+		width: 425px;
+	}
   #palettepic
   {
   	background-size: 100%;
@@ -735,6 +746,14 @@ article:hover .plats__choix--slide
 
 @media screen and (max-width: 375px) {
 
+	#loading_page
+	{
+		width: 375px;
+	}
+   .lds-spinner 
+  {
+  	left: 40%;
+  }
   #palettepic
   {
   	background-size: 100%;
@@ -785,6 +804,14 @@ article:hover .plats__choix p
   	background-size: 100%;
   	height: 20em;
   }
+  .lds-spinner 
+  {
+  	left: 35%;
+  }
+  #loading_page
+	{
+		width: 320px;
+	}
   #noteenchanteepic
   {
   	background-position: bottom;
