@@ -704,6 +704,10 @@ article:hover .plats__choix--slide
 	top: 55px;
 	left: 10px;
 }
+ article:hover .plats__choix p
+{
+	width: 17em;
+}
 }
 
 @media screen and (max-width: 425px) {
