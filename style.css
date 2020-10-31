@@ -32,7 +32,7 @@ $color-ter: #99E2D0;
 #loading_page
 {
 	z-index: 10;
-	transition: z-index 4s cubic-bezier(1, 0, 1, 0);
+	transition: z-index 3s cubic-bezier(1, 0, 1, 0);
   background-color: #99E2D0;
   display: inline-block;
   position: absolute;
@@ -58,8 +58,8 @@ $color-ter: #99E2D0;
   left: 47.5%;
   width: 80px;
   height: 80px;
-  -webkit-animation: fade-in 10s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
-	        animation: fade-in 10s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+  -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+	        animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
 }
 .lds-spinner div 
 {
