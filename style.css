@@ -1,7 +1,8 @@
-body
+#page
 {
 	max-width: 728px;
 	margin: auto;
+	z-index: 5;
 }
 *
 {
@@ -25,35 +26,40 @@ $color-ter: #99E2D0;
 /*loading-spinner*/
 #header_accueil, #accueil, #footer_accueil
 {
-	  -webkit-animation: fade-in 15s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in 15s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	  -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
-
 #loading_page
 {
+	z-index: 10;
+	transition: z-index 4s cubic-bezier(1, 0, 1, 0);
   background-color: #99E2D0;
   display: inline-block;
   position: absolute;
   top: 0%;
   left: auto;
+  right: auto;
   margin: auto;
-  width: 728px;
-  height: 290%;
-  -webkit-animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
-	        animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+  width: 100%;
+  height: 270%;
+  -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+	        animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
 }
-
+#loading_page:hover
+{
+	z-index: -10;
+}
 .lds-spinner 
 {
 	color: official;
   display: inline-block;
   position: relative;
   top: 15%;
-  left: 45%;
+  left: 47.5%;
   width: 80px;
   height: 80px;
-  -webkit-animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
-	        animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+  -webkit-animation: fade-in 10s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+	        animation: fade-in 10s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
 }
 .lds-spinner div 
 {
@@ -484,7 +490,7 @@ article
 }
 .plats__choix
 {
-	flex-grow: 1;
+	width: 39em;
 }
 .plats__choix p
 {
@@ -632,6 +638,10 @@ article
 	position: relative;
 	top: 0px;
 	left: -15px;
+}
+article:hover .plats__choix p
+{
+	width: 30em;
 }
 article:hover .fa-check-circle
 {   
