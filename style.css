@@ -32,7 +32,7 @@ $color-ter: #99E2D0;
 #loading_page
 {
 	z-index: 10;
-	transition: z-index 3s cubic-bezier(1, 0, 1, 0);
+	transition: z-index 2s cubic-bezier(1, 0, 1, 0);
   background-color: #99E2D0;
   display: inline-block;
   position: absolute;
@@ -793,7 +793,7 @@ article:hover .plats__choix--slide
   }
   .plats__choix
   {
-  	width: 5em;
+  	width: 20em;
   }
   #menus i
 {	
@@ -846,7 +846,7 @@ article:hover .plats__choix p
   }
   .plats__choix
   {
-  	width: 5em;
+  	width: 15em;
   }
   #menus i
 {	
